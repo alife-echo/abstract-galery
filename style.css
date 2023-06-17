@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
+}
+/*https://www.figma.com/file/kBFXgbYPBikod6jdlPykWk/Galeria-com-Hover?type=design&node-id=6-19&t=jLSJmrvWDQ7c2cQb-0*/
+html{
+    scroll-behavior: smooth;
+    --backgroundColorBody:#121213;
+    --colorText:#fff;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--backgroundColorBody);
+}
+.title-project{
+    width: 15rem;
+}
+main{
+    margin: 10rem;
+    display: flex;
+    justify-content: space-around;
+}
+.cards-imgs{
+    display: grid;
+
+
+    grid-template-columns: 38.4rem 38.4rem;
+    grid-template-rows: 60rem  40rem 60rem 40rem;
+    grid-template-areas: 'one two'
+                         'three three'
+                         'four five'  
+                         'six six'     
+    ;
+    gap: 3rem;
+}
+.title-project h1 {
+    font-family: 'Hepta Slab';
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--colorText);
+}
+.icon-arrow{
+    background-color: white;
+    padding: 1rem;
+    width: 40px;
+    border-radius: 50%;
+    rotate: 30deg;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.mt{
+    margin-top: 2.8rem;
+}
+.one{
+grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.four{
+  grid-area: four;
+}
+.five{
+  grid-area: five;
+}
+.six{
+ grid-area: six;
+}
+
+.st-img{
+    transition: 300ms;
+}
+.st-img:hover{
+    cursor: pointer;
+    border: 0.5rem solid var(--colorText);
+    transition: 300ms;
+}
+
+@media screen and (max-width:951px){ 
+    .title-project{
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    .icon-arrow{
+        rotate: 90deg;
+    }
+main{
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards-imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.two,.four{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+.title-project h1{
+    font-size: 2rem;
+}
+.st-adjust{
+    width: 75%;
+}
+.one img,.five img{
+    max-width: 78%;
+}
+
+.six-st.two{
+  display: flex;
+  justify-content: center;
+}
+}
